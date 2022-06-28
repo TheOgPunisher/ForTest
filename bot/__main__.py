@@ -66,10 +66,10 @@ def stats(update, context):
 def start(update, context):
     buttons = ButtonMaker()
     
-    buttons.buildbutton("Report Group", "https://t.me/Mltb_chat_unofficial")
-    buttons.buildbutton("Repo", "https://github.com/Dawn-India/Z-Mirror")
-    buttons.buildbutton("Mirror Group", "https://t.me/z_mirror")
-    buttons.buildbutton("Owner", "https://t.me/dawn_in")
+    buttons.buildbutton("Report Group", "https://t.me/OTDiscussion")
+    buttons.buildbutton("Repo", "https://t.me/DhruvMirror")
+    buttons.buildbutton("Mirror Group", "https://t.me/DhruvMirrorUpdates")
+    buttons.buildbutton("Owner", "https://t.me/Dhruv444")
     
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
@@ -79,7 +79,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Sorry, You cannot use me', context.bot, update.message, reply_markup)
+        sendMarkup('Sorry, You cannot use me. Join @DhruvMirrorUpdates', context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -175,7 +175,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Z-Mirror-Bot Help',
+        title='Dhruv Mirror Help',
         content=help_string_telegraph,
     )["path"]
 
